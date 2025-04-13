@@ -3,6 +3,7 @@ package com.chelabi.spring_kafka.controller;
 import com.chelabi.spring_kafka.dto.PostCreateDTO;
 import com.chelabi.spring_kafka.entity.Post;
 import com.chelabi.spring_kafka.service.PostService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/posts")
 @RequiredArgsConstructor
+@Tag(name = "Post", description = "Post API")
 public class PostController {
 
     private final PostService postService;

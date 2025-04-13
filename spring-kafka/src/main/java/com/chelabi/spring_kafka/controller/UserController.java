@@ -3,6 +3,7 @@ package com.chelabi.spring_kafka.controller;
 import com.chelabi.spring_kafka.dto.UserCreateDTO;
 import com.chelabi.spring_kafka.entity.User;
 import com.chelabi.spring_kafka.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
+@Tag(name = "User", description = "User API")
 public class UserController {
 
     private final UserService userService;
